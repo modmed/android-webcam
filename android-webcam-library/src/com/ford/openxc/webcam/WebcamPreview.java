@@ -130,4 +130,16 @@ public class WebcamPreview extends SurfaceView implements
             }
         }
     };
+    
+    public Bitmap snapPicture() {
+    	
+    	Bitmap picture = null;
+    	
+    	if(mWebcamManager != null) {
+    		picture = mWebcamManager.getFrame();
+    	}
+    	
+    	return picture;
+    	
+    }
 }

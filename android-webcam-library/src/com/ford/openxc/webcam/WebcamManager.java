@@ -25,7 +25,7 @@ public class WebcamManager extends Service {
         super.onCreate();
         Log.i(TAG, "Service starting");
 
-        mWebcam = new NativeWebcam("/dev/video0");
+        mWebcam = new NativeWebcam("/dev/video3");
     }
 
     @Override
