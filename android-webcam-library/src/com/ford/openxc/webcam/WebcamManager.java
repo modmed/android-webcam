@@ -14,7 +14,11 @@ public class WebcamManager extends Service {
     private IBinder mBinder = new WebcamBinder();
     private Webcam mWebcam;
 
-    public class WebcamBinder extends Binder {
+    public Webcam getWebcam() {
+		return mWebcam;
+	}
+
+	public class WebcamBinder extends Binder {
         public WebcamManager getService() {
             return WebcamManager.this;
         }

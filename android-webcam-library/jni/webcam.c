@@ -79,6 +79,11 @@ jboolean Java_com_ford_openxc_webcam_NativeWebcam_cameraAttached(JNIEnv* env,
     return DEVICE_DESCRIPTOR != -1;
 }
 
+jboolean Java_com_ford_openxc_webcam_NativeWebcam_hasSignal(JNIEnv* env,
+        jobject thiz) {
+    return RGB_BUFFER || Y_BUFFER;
+}
+
 jint JNI_OnLoad(JavaVM* vm, void* reserved) {
     cache_yuv_lookup_table(YUV_TABLE);
     return JNI_VERSION_1_6;

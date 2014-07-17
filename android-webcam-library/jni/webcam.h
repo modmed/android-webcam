@@ -18,5 +18,7 @@ jboolean Java_com_ford_openxc_webcam_NativeWebcam_cameraAttached(JNIEnv* env,
         jobject thiz);
 void Java_com_ford_openxc_webcam_NativeWebcam_stopCamera(JNIEnv* env,
         jobject thiz);
+jboolean Java_com_ford_openxc_webcam_NativeWebcam_hasSignal(JNIEnv* env,
+        jobject thiz);
 
 #endif // __WEBCAM_H__

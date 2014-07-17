@@ -21,6 +21,7 @@ public class NativeWebcam implements Webcam {
     private native boolean cameraAttached();
     private native void stopCamera();
     private native void loadNextFrame(Bitmap bitmap);
+    private native boolean hasSignal();
 
     static {
         System.loadLibrary("webcam");
@@ -70,4 +71,8 @@ public class NativeWebcam implements Webcam {
     public boolean isAttached() {
         return cameraAttached();
     }
+
+    public boolean isValidSignal() {
+		return hasSignal();
+	}
 }

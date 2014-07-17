@@ -135,7 +135,7 @@ public class WebcamPreview extends SurfaceView implements
     	
     	Bitmap picture = null;
     	
-    	if(mWebcamManager != null) {
+    	if(mWebcamManager != null && mWebcamManager.getWebcam().isValidSignal()) {
     		picture = mWebcamManager.getFrame();
     	}
     	

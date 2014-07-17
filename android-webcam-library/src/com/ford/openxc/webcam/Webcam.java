@@ -6,4 +6,5 @@ public interface Webcam {
     public Bitmap getFrame();
     public void stop();
     public boolean isAttached();
+    public boolean isValidSignal();
 }
