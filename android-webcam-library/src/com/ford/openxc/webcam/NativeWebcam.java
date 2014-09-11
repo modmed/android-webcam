@@ -8,8 +8,6 @@ import android.util.Log;
 public class NativeWebcam implements Webcam {
 
     private static String TAG = "NativeWebcam";
-    private static final int DEFAULT_IMAGE_WIDTH = 640;
-    private static final int DEFAULT_IMAGE_HEIGHT = 480;
 
     private Bitmap mBitmap;
     private int mWidth;
@@ -32,10 +30,6 @@ public class NativeWebcam implements Webcam {
         mHeight = height;
         mBitmap = Bitmap.createBitmap(mWidth, mHeight, Bitmap.Config.ARGB_8888);
         connect(deviceName, mWidth, mHeight);
-    }
-
-    public NativeWebcam(String deviceName) {
-        this(deviceName, DEFAULT_IMAGE_WIDTH, DEFAULT_IMAGE_HEIGHT);
     }
 
     private void connect(String deviceName, int width, int height) {

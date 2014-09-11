@@ -28,8 +28,11 @@ public class WebcamManager extends Service {
     public void onCreate() {
         super.onCreate();
         Log.i(TAG, "Service starting");
+        
+        int videoWidth = VideoUtils.getVideoWidth(getBaseContext());
+        int videoHeight = VideoUtils.getVideoHeight(getBaseContext());
 
-        mWebcam = new NativeWebcam("/dev/video3");
+        mWebcam = new NativeWebcam("/dev/video3", videoWidth, videoHeight);
     }
 
     @Override
